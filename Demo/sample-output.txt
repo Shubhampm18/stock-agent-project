@@ -1,0 +1,17 @@
+symbol         as_of          known_then  vendor_today    drift
+RELIANCE.NS    2024-10-01        1464.82       1452.28    -0.9%
+HDFCBANK.NS    2025-08-01        1006.10        989.73    -1.6%
+TCS.NS         2018-04-30        1766.05       1415.63   -19.8%
+INFY.NS        2020-01-01         736.85        605.86   -17.8%
+
+TCS.NS on 2018-04-30: the close printed that day was 1766.05 INR; today’s adjusted series reports 1415.63 INR for the same day (-19.8%).
+A threshold, a stop level, or a position size computed on the second
+number is a decision made with information from the future.
+
+Note on splits: yfinance's Close is already split-adjusted, so this
+server does NOT re-apply split ratios (doing so halves pre-split rows).
+The drift measured here is dividend vintage. A pre-split price as filed
+cannot be recovered from this source at all — the server records each
+split in adjustment_history with applied: false instead of inventing one.
+
+wrote docs\media\vintage_drift.svg
